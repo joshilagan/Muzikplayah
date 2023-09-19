@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="hero">
+    <div class="player">
+        <div class="pic">
+            <img class="disc" src="./img/disc.png" alt="" width="188">
+            <img class="taylor" src="./img/taylor.png" alt="" width="200">
+        </div>
+
+        <audio src="" id="audio"></audio>
+
+        <div class="player-label">
+            <h3 class="song-name">All Too Well (Taylor's Version)</h3>
+            <p class="artist">Taylor Swift</p>
+        </div>
+
+        <div class="slider">
+            <span class="start-time">00:00</span>
+            <span class="running-time">00:00</span>
+            <input type="range" value="0" class="seek-bar">
+        </div>
+
+        <div class="player-control">
+            <button class="btn back-btn"><img class="backwardz" src="./img/backward.png" alt="" width="40" height="38"></button>
+            <button class="play pause">
+                <span></span>
+                <span></span>
+            <button class="btn forward-btn"><img class="forwardz" src="./img/forward.png" alt="" width="40" height="38"></button>
+            </button>
+        </div>
+    </div>
+
+    <div class="tab">
+        <p class="explore">Explore</p>
+        <div class="sub-tab">
+            <span id="lyric-tab" class="space current">Lyrics</span>
+            <span class="other-albums space pointer">Other Albums</span>
+            <span class="related-artists space pointer">Related Artists</span>
+        </div>
+        <div class="content">
+            <div id="lyrics">
+                <p>I walked through the door with you</p>
+                <p>The air was cold</p>
+                <p>But something 'bout it felt like home somehow</p>
+                <p>And I, left my scarf there at your sister's house</p>
+                <p>And you've still got it in your drawer even now</p>
+                <br>
+                <p>Oh, your sweet disposition</p>
+                <p>And my wide-eyed gaze</p>
+                <p>We're singing in the car, getting lost upstate</p>
+                <p>Autumn leaves falling down like pieces into place</p>
+                <p>And I can picture it after all these days</p>
+
+                <br>
+                <p>And I know it's long gone and that magic's not here no more</p>
+                <p></p>And I might be okay, but I'm not fine at all</p>
+                <br>
+                <p>'Cause there we are again on that little town street</p>
+                <p>You almost ran the red 'cause you were looking over at me</p>
+                <p>Wind in my hair, I was there</p>
+                <p>I remember it all too well</p>
+                <br>
+                <p>Photo album on the counter</p>
+                <p>Your cheeks were turning red</p>
+                <p>You used to be a little kid with glasses in a twin-sized bed</p>
+                <p>And your mother's telling stories 'bout you on the tee-ball team</p>
+                <p>You told me 'bout your past thinking your future was me</p>
+                <br>
+                <p>And you were tossing me the car keys</p>
+                <p>"F- the patriarchy" keychain on the ground</p>
+                <p>We were always skipping town</p>
+                <p>And I was thinking on the drive down</p>
+                <p>Any time now, he's gonna say it's love</p>
+                <p>ou never called it what it was</p>
+                <br>
+                <p>'Til we were dead and gone and buried</p>
+                <p>Check the pulse and come back swearing it's the same</p>
+                <p>After three months in the grave</p>
+                <p>And then you wondered where it went to as I reached for you</p>
+                <p>But all I felt was shame, and you held my lifeless frame</p>
+                <br>
+                <p>And I know it's long gone, and there was nothing else I could do</p>
+                <p>And I forget about you long enough to forget why I needed to</p>
+                <br>
+                <p>'Cause there we are again in the middle of the night</p>
+                <p>We're dancing 'round the kitchen in the refrigerator light</p>
+                <p>Down the stairs, I was there</p>
+                <p>I remember it all too well</p>
+                <br>
+                <p>And there we are again when nobody had to know</p>
+                <p>You kept me like a secret, but I kept you like an oath</p>
+                <p>Sacred prayer and we'd swear</p>
+                <p>To remember it all too well</p>
+                <br>
+                <p>Well, maybe we got lost in translation</p>
+                <p>Maybe I asked for too much</p>
+                <p>But maybe this thing was a masterpiece 'til you tore it all up</p>
+                <p>Running scared, I was there</p>
+                <p>I remember it all too well</p>          
+            </div>
+           
+                <!-- <div id="related-artists-div">
+                    <div id="rel-art-card">
+                        <a href="https://open.spotify.com/artist/zzlpwp9oqs59bqkasw2v6d96w"><img src="./img/taylor.png" alt="related-artist-pic" id="related-artist-pic"></a>
+                        <p id="art-name" class="space">Related Artists Name</p>                      
+                    </div>
+                    <div id="rel-art-card">
+                        <a href="https://open.spotify.com/artist/zzlpwp9oqs59bqkasw2v6d96w"><img src="./img/taylor.png" alt="related-artist-pic" id="related-artist-pic"></a>
+                        <p id="art-name" class="space">Related Artists Name</p>                      
+                    </div>
+                    <div id="rel-art-card">
+                        <a href="https://open.spotify.com/artist/zzlpwp9oqs59bqkasw2v6d96w"><img src="./img/taylor.png" alt="related-artist-pic" id="related-artist-pic"></a>
+                        <p id="art-name" class="space">Related Artists Name</p>                      
+                    </div>              
+                </div> -->
+           
+            
+        </div>
+    </div>
+
+</div>  
+    <!-- <script src="data.js"></script> -->
+    <script src="main.js"></script>
+</body>
+</html>
